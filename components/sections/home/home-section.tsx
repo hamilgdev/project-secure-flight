@@ -21,14 +21,14 @@ export const HomeSection = () => {
           <div className="l-container">
             <div className="text-center max-w-2xl mx-auto">
               <h1 className='text-[var(--neutral-thin)] text-3xl font-semibold mb-6'>
-          Embarque Seguro, Viaje Sin Preocupaciones con SecureFlight
+                Embarque Seguro, Viaje Sin Preocupaciones con SecureFlight
               </h1>
               <p className='text-[var(--neutral-thin)] text-lg mb-8'>
-          Optimice la seguridad y eficiencia en su aeropuerto con SecureFlight.
-          Tecnología avanzada para un viaje seguro y fluido.
+                Optimice la seguridad y eficiencia en su aeropuerto con SecureFlight.
+                Tecnología avanzada para un viaje seguro y fluido.
               </p>
               <Link
-                href="/auth/login"
+                href="/login"
                 className="inline-block uppercase shadow-md bg-[var(--complementary)] text-white py-2 px-4 rounded-md min-w-[190px]">Comenzar</Link>
             </div>
           </div>
@@ -50,7 +50,6 @@ export const HomeSection = () => {
       />
 
       <div className="absolute bottom-0 left-0 bg-contain bg-no-repeat bg-left-bottom bg-[url('/images/cloud-medium.png')] min-h-[414px] w-full pointer-events-none z-20" />
-
     </>
   )
 }
