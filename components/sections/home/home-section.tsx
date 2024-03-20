@@ -28,7 +28,7 @@ export const HomeSection = () => {
           Tecnología avanzada para un viaje seguro y fluido.
               </p>
               <Link
-                href="/dashboard"
+                href="/auth/login"
                 className="inline-block uppercase shadow-md bg-[var(--complementary)] text-white py-2 px-4 rounded-md min-w-[190px]">Comenzar</Link>
             </div>
           </div>
