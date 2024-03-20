@@ -5,8 +5,7 @@
     "node": true
   },
   "extends": [
-    "next/core-web-vitals",
-    "standard"
+    "next/core-web-vitals"
   ],
   "overrides": [],
   "parserOptions": {
