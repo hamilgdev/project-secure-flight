@@ -47,7 +47,7 @@
 
 body {
   font-family: var(--body-font);
-  @apply leading-relaxed text-[var(--neutral-default)] dark:text-[var(--neutral-luminous)] bg-[var(--accent-v50)] dark:bg-[var(--accent-v800)];
+  @apply leading-relaxed text-[var(--neutral-default)];
 }
 
 h1,
@@ -57,5 +57,5 @@ h4,
 h5,
 h6 {
  font-family: var(--heading-font);
- @apply leading-tight text-[var(--neutral-default)] dark:text-[var(--neutral-luminous)];
+ @apply leading-tight text-[var(--neutral-default)];
 }

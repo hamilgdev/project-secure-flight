@@ -5,7 +5,7 @@ export const lato = Lato({
   style: ['normal'],
   weight: ['400'],
   display: 'swap',
-  variable: '--heading-font'
+  variable: '--body-font'
 })
 
 export const poppins = Poppins({
@@ -13,5 +13,5 @@ export const poppins = Poppins({
   style: ['normal'],
   weight: ['300', '600'],
   display: 'swap',
-  variable: '--body-font'
+  variable: '--heading-font'
 })
