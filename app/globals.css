@@ -3,31 +3,59 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* LAYOUT */
+  --max-width: 77.5rem; /* 1240px */
+
+  /* COLORS */
+  --accent: #92CACB; /* main */
+
+  --complementary: #738ff7; /* main */
+
+  --neutral-default: #22292A;
+  --neutral-thin: #565656;
+  --neutral-delicate: #E6E9EA;
+  --neutral-luminous: #FDFDFD;
+  --neutral-background: #EFFAFD;
+  
+  /* TYPOGRAPHY */
+  --heading-font: "Poppins";
+  --body-font: "Lato";
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+/* UTILS CLASSES */
+
+/* layout */
+
+.l-container {
+  @apply px-4 lg:mx-auto w-full xl:px-0 max-w-[var(--max-width)]
 }
+
+/* theme  */
+
+.heading-font {
+  font-family: var(--heading-font);
+  @apply leading-tight text-[var(--neutral-default)] dark:text-[var(--neutral-luminous)];
+}
+
+.body-font {
+  font-family: var(--body-font);
+  @apply leading-relaxed text-[var(--neutral-default)] dark:text-[var(--neutral-luminous)];
+}
+
+/* RESET STYLES */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: var(--body-font);
+  @apply leading-relaxed text-[var(--neutral-default)] dark:text-[var(--neutral-luminous)] bg-[var(--accent-v50)] dark:bg-[var(--accent-v800)];
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ font-family: var(--heading-font);
+ @apply leading-tight text-[var(--neutral-default)] dark:text-[var(--neutral-luminous)];
 }
