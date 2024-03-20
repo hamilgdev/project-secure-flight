@@ -1,6 +1,9 @@
-import { OverviewCard, UsersTable } from '@/components'
-import { UserCheckIcon, UsersIcon } from '@/components/icons'
+'use client'
+
 import Image from 'next/image'
+
+import { OverviewCard, UsersTable, UserCheckIcon, UsersIcon, CircleLoader } from '@/components'
+import { useGetUsers } from '@/hooks'
 
 const FAKE_DATA = [
   { id: 1, documento: '920994160', nombre: 'Alan Thomas', email: 'webbgeorge@yahoo.com', telefono: '960.277.4195x80083', rol: 'Conductor', estado: 'Activo' },
@@ -21,6 +24,10 @@ const FAKE_DATA = [
 ]
 
 export const DashboardSection = () => {
+  const { users, loading, error  } = useGetUsers()
+
+  if (loading) return <CircleLoader />
+  
   return (
     <div className="flex h-screen">
       <aside
