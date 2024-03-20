@@ -8,7 +8,7 @@ export const HeaderSection = () => {
       <div className="l-container">
         <div className="flex items-center justify-between">
           <Link href="/">
-            <Image src="/images/logo.svg" alt="Secure Flight" width={133} height={30} />
+            <Image src="/svgs/logo.svg" alt="Secure Flight" width={133} height={30} />
           </Link>
 
           <Link
