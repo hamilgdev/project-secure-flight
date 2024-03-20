@@ -28,6 +28,14 @@ app.stop_prod:
 	@docker stop host-stack-app || true
 	@docker rm host-stack-app || true
 
+## Prepare image to DockerHub
+
+app.rename_image:
+	docker tag host-stack-app:latest hamilgdev/front-secure-flight
+
+app.push_image:
+	docker push hamilgdev/front-secure-flight
+
 # -------------------------🔖 FRONTEND-------------------------
 
 frontend.build:
