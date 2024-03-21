@@ -1,6 +1,6 @@
 'use client'
 
-import { LOCAL_SORAGE_JWT_TOKEN_KEY } from '@/constants'
+import { LOCAL_STORAGE_JWT_TOKEN_KEY } from '@/constants'
 import { setLocal } from '@/handlers'
 import { useHidrationClient } from '@/hooks'
 import { postAuthLogin } from '@/services'
@@ -36,7 +36,7 @@ export const LoginForm = () => {
       const response = await postAuthLogin(nombreUsuario, clave)
       const token = response.token
       if (token) {
-        setLocal(LOCAL_SORAGE_JWT_TOKEN_KEY, token)
+        setLocal(LOCAL_STORAGE_JWT_TOKEN_KEY, token)
         router.push('/dashboard')
       }
     } catch (error) {

@@ -1,4 +1,4 @@
-import { LOCAL_SORAGE_JWT_TOKEN_KEY } from '@/constants'
+import { LOCAL_STORAGE_JWT_TOKEN_KEY } from '@/constants'
 import { getLocal } from '@/handlers'
 import { getUsers } from '@/services'
 import { useCallback, useEffect, useState } from 'react'
@@ -9,7 +9,7 @@ export const useGetUsers = () => {
   const [error, setError] = useState('')
 
   const handlerGetUsers = useCallback(async () => {
-    const jwt = getLocal(LOCAL_SORAGE_JWT_TOKEN_KEY)
+    const jwt = getLocal(LOCAL_STORAGE_JWT_TOKEN_KEY)
 
     if (!jwt) return;
 
