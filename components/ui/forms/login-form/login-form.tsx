@@ -11,8 +11,8 @@ export const LoginForm = () => {
   const router = useRouter()
 
   const [formValues, setFormValues] = useState({
-    email: '',
-    password: ''
+    nombreUsuario: '',
+    clave: ''
   })
   const [loading, setLoading] = useState(false)
 
@@ -27,13 +27,13 @@ export const LoginForm = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const { email, password } = formValues
-    if (!email || !password) return
+    const { nombreUsuario, clave } = formValues
+    if (!nombreUsuario || !clave) return
     
     setLoading(true)
 
     try {
-      const response = await postAuthLogin(email, password)
+      const response = await postAuthLogin(nombreUsuario, clave)
       const token = response.token
       if (token) {
         setLocal(LOCAL_SORAGE_JWT_TOKEN_KEY, token)
@@ -49,26 +49,26 @@ export const LoginForm = () => {
   return (
     <form onSubmit={handleSubmit} className='flex flex-col place-items-center w-full'>
       <div className="mb-4 w-full">
-        <label htmlFor="email" arial-label='hidden' className="hidden">Correo electrónico</label>
+        <label htmlFor="nombreUsuario" arial-label='hidden' className="hidden">Nombre de usuario</label>
         <input
-          type="email"
-          id="email"
-          value={formValues.email}
-          name="email"
+          type="text"
+          id="nombreUsuario"
+          value={formValues.nombreUsuario}
+          name="nombreUsuario"
           className="bg-white text-[var(--neutral-thin)] text-sm rounded-md  block w-full p-2.5"
-          placeholder="correo electrónico"
+          placeholder="nombre de usuario"
           onChange={onChnage}
           required
         />
       </div>
 
       <div className="mb-12 w-full">
-        <label htmlFor="password" arial-label='hidden' className="hidden">Contraseña</label>
+        <label htmlFor="clave" arial-label='hidden' className="hidden">Contraseña</label>
         <input
           type="password"
-          id="password"
-          value={formValues.password}
-          name="password"
+          id="clave"
+          value={formValues.clave}
+          name="clave"
           className="bg-white text-[var(--neutral-thin)] text-sm rounded-md  block w-full p-2.5"
           placeholder="contraseña"
           onChange={onChnage}
