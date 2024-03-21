@@ -31,10 +31,10 @@ app.stop_prod:
 ## Prepare image to DockerHub
 
 app.rename_image:
-	docker tag host-stack-app:latest hamilgdev/front-secure-flight
+	docker tag host-stack-app:latest hamilgdev/front-secure-flight:0.0.3
 
 app.push_image:
-	docker push hamilgdev/front-secure-flight
+	docker push hamilgdev/front-secure-flight:0.0.3
 
 # -------------------------🔖 FRONTEND-------------------------
 
